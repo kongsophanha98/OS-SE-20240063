@@ -1,0 +1,10 @@
+/mnt/c/Users/U-ser/os-se-p20240063/os-lab-p20240063/lab1/task2_files
+a.txt
+b.txt
+This is file A
+This is file B
+a.txt
+a_copy.txt
+b.txt
+a.txt
+b.txt

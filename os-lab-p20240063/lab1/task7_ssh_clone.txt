@@ -1,0 +1,33 @@
+.
+├── images
+│   ├── desktop.ini
+│   ├── Screenshot 2026-03-13 215656.png
+│   ├── Screenshot 2026-03-13 215846.png
+│   ├── Screenshot 2026-03-13 220027.png
+│   ├── Screenshot 2026-03-13 220833.png
+│   ├── Screenshot 2026-03-13 221023.png
+│   ├── Screenshot 2026-03-13 221100.png
+│   ├── Screenshot 2026-03-13 221156.png
+│   ├── Screenshot 2026-03-13 221304.png
+│   ├── Screenshot 2026-03-13 221946.png
+│   └── Screenshot 2026-03-13 222332.png
+├── README.md
+├── task1_os_info.txt
+├── task2_file_commands.txt
+├── task2_files
+│   ├── a.txt
+│   └── b.txt
+├── task3_apt_install.txt
+├── task3_apt_purge.txt
+├── task3_apt_remove.txt
+├── task3_apt_update.txt
+├── task3_config_after_purge.txt
+├── task3_config_after_remove.txt
+├── task3_verify_install.txt
+├── task4_process_list.txt
+├── task5_app_verify.txt
+├── task5_multitasking.txt
+├── task6_virtualization_check.txt
+└── task7_ssh_clone.txt
+
+3 directories, 28 files

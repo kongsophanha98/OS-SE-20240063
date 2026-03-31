@@ -1,0 +1,7 @@
+=== Task 4: Navigation with Paths ===
+--- Sideways to engineering/frontend/ ---
+/mnt/c/Users/U-ser/os-se-p20240063/os-lab-p20240063/lab2/techcorp/engineering/frontend
+app_config.txt
+index.html
+styles.css
+task4_navigation_paths.txt

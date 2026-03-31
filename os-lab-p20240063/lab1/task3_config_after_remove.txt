@@ -1,0 +1,1 @@
+drwxr-xr-x 2 root root 4096 Mar 13 22:09 /etc/mc
