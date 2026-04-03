@@ -1,0 +1,2 @@
+Child reading from shared memory: Hello from shared memory!
+Parent wrote to shared memory.
