@@ -1,0 +1,20 @@
+   87  ls
+   88  whoami
+   89  ssh p20240063@server-address
+   90  cd os-se-p20240063
+   91  ssh p20240063@your-server
+   92  ls
+   93  clear
+   94  exit
+   95  ls
+   96  cd OS-SE-20240063
+   97  ls
+   98  tree
+   99  mkdir -p os-class-activities-20240063/activity2/{task1,task2,task3_shm,task4_mq,screenshots}
+  100  cd os-class-activities-20240063/activity2/task1
+  101  nano forkchild.c
+  102  gcc -o forkchild forkchild.c
+  103  ./forkchild
+  104  ps -ef --forest | grep forkchild
+  105  ./forkchild > result_forkchild.txt 2>&1
+  106  history | tail -n 20 > command_used_forkchild.txt

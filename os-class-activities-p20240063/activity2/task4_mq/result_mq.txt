@@ -1,0 +1,2 @@
+Child received message: Hello from message queue!
+Parent sent message.

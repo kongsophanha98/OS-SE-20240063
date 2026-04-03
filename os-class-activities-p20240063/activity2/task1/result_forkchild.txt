@@ -1,0 +1,9 @@
+total 32
+drwxrwxr-x 2 se-kong-sophanha se-kong-sophanha  4096 Apr  3 21:04 .
+drwxrwxr-x 7 se-kong-sophanha se-kong-sophanha  4096 Apr  3 21:01 ..
+-rwxrwxr-x 1 se-kong-sophanha se-kong-sophanha 16400 Apr  3 21:02 forkchild
+-rw-rw-r-- 1 se-kong-sophanha se-kong-sophanha   832 Apr  3 21:02 forkchild.c
+-rw-rw-r-- 1 se-kong-sophanha se-kong-sophanha     0 Apr  3 21:04 result_forkchild.txt
+Parent process (PID: 299085) — creating child...
+Parent: waiting for child (PID: 299086)...
+Parent: done.
