@@ -1,4 +1,2 @@
-=== Task 5: Shared Library (Pair Simulation) ===
---- Pair simulation output ---
-Function A from Library A
-Function B from Library B
+Multiple shared libraries linked and executed.
+libA.so and libB.so used in main program.
