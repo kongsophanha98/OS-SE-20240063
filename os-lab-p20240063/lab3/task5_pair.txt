@@ -1,0 +1,4 @@
+=== Task 5: Shared Library (Pair Simulation) ===
+--- Pair simulation output ---
+Function A from Library A
+Function B from Library B

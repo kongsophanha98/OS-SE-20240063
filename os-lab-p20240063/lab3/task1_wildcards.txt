@@ -1,0 +1,35 @@
+=== Task 1: Wildcards ===
+--- All .txt files ---
+memo_fri.txt
+memo_mon.txt
+memo_thu.txt
+memo_tue.txt
+memo_wed.txt
+notes.txt
+readme.txt
+report01.txt
+report02.txt
+report03.txt
+report10.txt
+summary.txt
+--- Files starting with report ---
+report01.txt
+report02.txt
+report03.txt
+report10.txt
+--- Files starting with log_ ---
+log_apr.log
+log_feb.log
+log_jan.log
+log_mar.log
+--- data0?.csv ---
+data01.csv
+data02.csv
+data03.csv
+--- image?.png ---
+image1.png
+image2.png
+--- temp?.tmp ---
+temp1.tmp
+temp2.tmp
+temp3.tmp
