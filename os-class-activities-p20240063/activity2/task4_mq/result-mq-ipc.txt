@@ -1,0 +1,1 @@
+Receiver: message = "Hello from sender! This is message queue IPC."

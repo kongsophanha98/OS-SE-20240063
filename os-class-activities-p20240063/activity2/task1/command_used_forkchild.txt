@@ -1,0 +1,1 @@
+gcc -o forkchild forkchild.c && ./forkchild

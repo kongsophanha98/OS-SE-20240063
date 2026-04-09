@@ -1,0 +1,2 @@
+Consumer: reading from shared memory 'OS-phanha'
+Consumer: message = "Hello, this is shared memory IPC!"

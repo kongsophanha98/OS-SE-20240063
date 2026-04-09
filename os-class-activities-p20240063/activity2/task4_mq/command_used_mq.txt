@@ -1,0 +1,20 @@
+  650  ./forkchild > result_forkchild.txt 2>&1
+  651  history | tail -n 20 > command_used_forkchild.txt
+  652  ls
+  653  cd ../task3_shm
+  654  nano shm-producer.c
+  655  nano shm-consumer.c
+  656  gcc -o shm-producer shm-producer.c -lrt
+  657  gcc -o shm-consumer shm-consumer.c -lrt
+  658  ./shm-producer
+  659  ./shm-consumer > result-shm-ipc.txt
+  660  history | tail -n 20 > command_used_shm.txt
+  661  cd ../task4_mq
+  662  nano common.h
+  663  nano sender.c
+  664  nano receiver.c
+  665  gcc -o sender sender.c -lrt
+  666  gcc -o receiver receiver.c -lrt
+  667  ./sender
+  668  ./receiver > result-mq-ipc.txt
+  669  history | tail -n 20 > command_used_mq.txt

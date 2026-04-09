@@ -1,0 +1,11 @@
+total 28
+drwxrwxrwx 1 phanha phanha   512 Apr  9 20:53 .
+drwxrwxrwx 1 phanha phanha   512 Apr  8 16:37 ..
+-rwxrwxrwx 1 phanha phanha   981 Apr  8 16:34 command_used_forkchild.txt
+-rwxrwxrwx 1 phanha phanha 16400 Apr  9 20:53 forkchild
+-rwxrwxrwx 1 phanha phanha  1017 Apr  8 16:21 forkchild.c
+-rwxrwxrwx 1 phanha phanha     0 Apr  9 20:54 result_forkchild.txt
+Parent process (PID: 3953) — creating child...
+Parent: waiting for child (PID: 3954) to finish...
+Parent: child exited with status 0
+Parent: done.
