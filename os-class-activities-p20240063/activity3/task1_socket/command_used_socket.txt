@@ -1,0 +1,20 @@
+ 1481  mkdir -p activity3/{task1_socket,task2_threads,task3_java,screenshots}
+ 1482  cd activity3
+ 1483  ls
+ 1484  cd task1_socket
+ 1485  nano server.c
+ 1486  nano client.c
+ 1487  gcc -o server server.c
+ 1488  gcc -o client client.c
+ 1489  gcc -o server server.c
+ 1490  gcc -o client client.c
+ 1491  ./server &
+ 1492  sleep 1
+ 1493  ./client
+ 1494  ./server > result_server.txt 2>&1 &
+ 1495  sleep 1
+ 1496  ./client > result_client.txt 2>&1
+ 1497  wait
+ 1498  cat result_server.txt result_client.txt > result_socket.txt
+ 1499  cat result_socket.txt
+ 1500  history | tail -n 20 > command_used_socket.txt

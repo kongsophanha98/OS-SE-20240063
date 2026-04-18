@@ -1,0 +1,23 @@
+phanha      3980     365    3980  0    5 23:39 pts/0    00:00:00 ./threads_observe
+phanha      3980     365    3982  0    5 23:39 pts/0    00:00:00 ./threads_observe
+phanha      3980     365    3983  0    5 23:39 pts/0    00:00:00 ./threads_observe
+phanha      3980     365    3984  0    5 23:39 pts/0    00:00:00 ./threads_observe
+phanha      3980     365    3985  0    5 23:39 pts/0    00:00:00 ./threads_observe
+phanha      3992     365    3992  0    5 23:39 pts/0    00:00:00 ./threads_observe
+phanha      3992     365    3995  0    5 23:39 pts/0    00:00:00 ./threads_observe
+phanha      3992     365    3996  0    5 23:39 pts/0    00:00:00 ./threads_observe
+phanha      3992     365    3997  0    5 23:39 pts/0    00:00:00 ./threads_observe
+phanha      3992     365    3998  0    5 23:39 pts/0    00:00:00 ./threads_observe
+    PID    SPID TTY          TIME CMD
+   3992    3992 pts/0    00:00:00 threads_observe
+   3992    3995 pts/0    00:00:00 threads_observe
+   3992    3996 pts/0    00:00:00 threads_observe
+   3992    3997 pts/0    00:00:00 threads_observe
+   3992    3998 pts/0    00:00:00 threads_observe
+--- /proc/3992/task/ listing ---
+3992
+3995
+3996
+3997
+3998
+5
