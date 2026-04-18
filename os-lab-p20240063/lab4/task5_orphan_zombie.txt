@@ -1,0 +1,23 @@
+=== Task 5: Orphan & Zombie Processes ===
+--- Orphan process observation ---
+Child PID: 1373, Original PPID: 1373, New PPID after parent exit: 1
+--- Zombie process observation ---
+Zombie PID: 1479, State: Z (zombie/defunct), Parent PID: 1477
+--- Zombie and Orphan Cleanup Notes ---
+Q: How are orphans cleaned up? A: They are adopted by init/systemd (PID 1) which becomes their new parent
+Q: How are zombies cleaned up? A: When the parent calls wait() to read the child exit status, or when the parent itself exits
+Q: Can you kill a zombie with 'kill -9'? Why or why not? A: No, because a zombie is already dead - it has no running code to kill. Only the parent calling wait() can remove it
+--- Challenge 5a: zombie with wait() ---
+After parent calls wait(), zombie disappears from process table
+    PID TTY          TIME CMD
+   1451 pts/2    00:00:00 bash
+    433 pts/1    00:00:00 bash
+    365 pts/0    00:00:00 bash
+   1266 pts/0    00:00:00  \_ sleep
+   1639 pts/0    00:00:00  \_ three_children
+   1641 pts/0    00:00:00  |   \_ three_children
+   1642 pts/0    00:00:00  |   \_ three_children
+   1643 pts/0    00:00:00  |   \_ three_children
+   1644 pts/0    00:00:00  \_ ps
+    412 ?        00:00:00 systemd
+    413 ?        00:00:00  \_ (sd-pam)
