@@ -1,0 +1,24 @@
+# Activity 2 — Processes & IPC
+
+## Task 1 — forkchild
+- Description: Process creation using `fork()`.
+- Files: `forkchild.c`
+- Output: `result_forkchild.txt`
+
+## Task 2 — Windows Process
+- Description: Launching Paint with `CreateProcess()`.
+- Files: `winprocess.c`
+- Screenshots: `screenshots/task2_taskmanager_tree.png`, `screenshots/task2_taskmanager_details.png`
+
+## Task 3 — Shared Memory IPC
+- Description: Producer/consumer shared memory example.
+- Files: `shm-producer.c`, `shm-consumer.c`, `common.h`
+- Output: `result-shm-ipc.txt`
+
+## Task 4 — Message Queue IPC
+- Description: Sender/receiver using POSIX message queue.
+- Files: `sender.c`, `receiver.c`, `common.h`
+- Output: `result-mq-ipc.txt`
+
+## Screenshots
+- Stored in `screenshots/` folder.

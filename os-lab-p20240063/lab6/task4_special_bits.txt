@@ -1,0 +1,2 @@
+drwxrws--T 2 root devteam 4096 May 26 13:35 /opt/techcorp/devproject
+-rwsr-xr-x 1 root root 16184 May 26 13:39 security_lab/whoami_suid
