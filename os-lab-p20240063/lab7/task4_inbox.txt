@@ -1,0 +1,5 @@
+=== inbox permissions ===
+drwx-wx-wx 2 se-kong-sophanha se-kong-sophanha 4096 May 26 14:25 /home/se-kong-sophanha/public_inbox
+=== inbox files as owner ===
+total 0
+-rw-rw-r-- 1 se-chheng-sokuntheary se-chheng-sokuntheary 0 May 26 14:25 test_from_chheng_sokuntheary.txt

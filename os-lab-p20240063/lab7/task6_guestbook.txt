@@ -1,0 +1,6 @@
+=== guestbook permissions ===
+-rw------- 1 se-kong-sophanha se-kong-sophanha 39 May 26 14:40 /home/se-kong-sophanha/guestbook.txt
+=== sign_book permissions ===
+-rwsr-xr-x 1 se-kong-sophanha se-kong-sophanha 16096 May 26 14:38 /home/se-kong-sophanha/bin/sign_book
+=== guestbook contents ===
+Visitor signed: Hello from Sokuntheary
