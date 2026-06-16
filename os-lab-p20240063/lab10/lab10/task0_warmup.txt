@@ -1,0 +1,11 @@
+=== script permissions ===
+-rwxr-xr-x 1 phanha phanha 405 Jun 16 13:54 /home/phanha/bin/automation_demo
+=== log contents ===
+2026-06-16 13:55:28 | automation_demo started by user phanha
+2026-06-16 13:55:28 | working directory is /mnt/c/Users/U-ser/os-se-p20240063/os-lab-p20240063/Lab10/lab10
+2026-06-16 13:55:28 | home directory is /home/phanha
+2026-06-16 13:55:28 | automation_demo finished successfully
+2026-06-16 13:55:28 | automation_demo started by user phanha
+2026-06-16 13:55:28 | working directory is /mnt/c/Users/U-ser/os-se-p20240063/os-lab-p20240063/Lab10/lab10
+2026-06-16 13:55:28 | home directory is /home/phanha
+2026-06-16 13:55:28 | automation_demo finished successfully

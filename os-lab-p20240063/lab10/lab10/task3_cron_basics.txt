@@ -1,0 +1,18 @@
+=== installed cron jobs ===
+# Lab10 heartbeat - runs every minute
+* * * * * date '+\%Y-\%m-\%d \%H:\%M:\%S heartbeat' >> $HOME/os-lab-automation/logs/heartbeat.log 2>&1
+
+# Lab10 GRADED session job - fires once at 2:30 PM on 2026-06-16 (lab session)
+30 14 16 6 * /home/phanha/bin/lab_session_job >> /home/phanha/os-lab-automation/logs/cron_session_job.log 2>&1
+
+# Lab10 GRADED deadline job - fires once at 2:30 PM on 2026-06-22 (before deadline)
+30 14 22 6 * /home/phanha/bin/deadline_job >> /home/phanha/os-lab-automation/logs/cron_deadline_job.log 2>&1
+=== heartbeat log (one line per minute) ===
+2026-06-16 14:04:01 heartbeat
+2026-06-16 14:05:01 heartbeat
+2026-06-16 14:06:01 heartbeat
+2026-06-16 14:07:01 heartbeat
+2026-06-16 14:08:01 heartbeat
+2026-06-16 14:09:01 heartbeat
+2026-06-16 14:10:01 heartbeat
+2026-06-16 14:11:01 heartbeat

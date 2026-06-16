@@ -1,0 +1,13 @@
+=== archive sizes (plain vs compressed) ===
+-rw-r--r-- 1 phanha phanha 1.3K Jun 16 13:57 /home/phanha/os-lab-automation/project_compressed.tar.gz
+-rw-r--r-- 1 phanha phanha  10K Jun 16 13:57 /home/phanha/os-lab-automation/project_plain.tar
+=== contents of compressed archive ===
+project/
+project/docs/
+project/docs/notes.txt
+project/docs/changelog.txt
+project/src/
+project/src/widget.py
+project/README.md
+=== restore verification ===
+RESTORE OK: archive matches original

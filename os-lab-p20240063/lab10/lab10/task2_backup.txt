@@ -1,0 +1,23 @@
+=== backup script permissions ===
+-rwxr-xr-x 1 phanha phanha 792 Jun 16 13:58 /home/phanha/bin/backup_project
+=== archives kept (should be 3) ===
+/home/phanha/os-lab-automation/backups/project_20260616_135840.tar.gz
+/home/phanha/os-lab-automation/backups/project_20260616_135839.tar.gz
+/home/phanha/os-lab-automation/backups/project_20260616_135838.tar.gz
+=== backup log ===
+2026-06-16 13:58:37 | starting backup of /home/phanha/os-lab-automation/project
+2026-06-16 13:58:37 | created archive /home/phanha/os-lab-automation/backups/project_20260616_135837.tar.gz
+2026-06-16 13:58:37 | no old archives to prune
+2026-06-16 13:58:37 | backup finished successfully
+2026-06-16 13:58:38 | starting backup of /home/phanha/os-lab-automation/project
+2026-06-16 13:58:38 | created archive /home/phanha/os-lab-automation/backups/project_20260616_135838.tar.gz
+2026-06-16 13:58:38 | no old archives to prune
+2026-06-16 13:58:38 | backup finished successfully
+2026-06-16 13:58:39 | starting backup of /home/phanha/os-lab-automation/project
+2026-06-16 13:58:39 | created archive /home/phanha/os-lab-automation/backups/project_20260616_135839.tar.gz
+2026-06-16 13:58:39 | no old archives to prune
+2026-06-16 13:58:39 | backup finished successfully
+2026-06-16 13:58:40 | starting backup of /home/phanha/os-lab-automation/project
+2026-06-16 13:58:40 | created archive /home/phanha/os-lab-automation/backups/project_20260616_135840.tar.gz
+2026-06-16 13:58:40 | pruned old archive /home/phanha/os-lab-automation/backups/project_20260616_135837.tar.gz
+2026-06-16 13:58:40 | backup finished successfully
