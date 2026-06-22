@@ -1,0 +1,17 @@
+=== teardown script ===
+-rwxr-xr-x 1 phanha phanha 334 Jun 11 09:53 /home/phanha/bin/teardown
+=== process check ===
+phanha      1104  0.0  0.0   4752  3328 pts/0    S    23:28   0:00 /bin/bash /home/phanha/bin/cross_sync_alpha
+phanha      1107  0.0  0.0   4752  3328 pts/0    S    23:28   0:00 /bin/bash /home/phanha/bin/cross_sync_beta
+=== final working folder ===
+/home/phanha/os-lab-deadlock
+/home/phanha/os-lab-deadlock/public_dr_alpha
+/home/phanha/os-lab-deadlock/public_dr_alpha/vault.lock
+/home/phanha/os-lab-deadlock/public_dr_beta
+/home/phanha/os-lab-deadlock/public_dr_beta/vault.lock
+/home/phanha/os-lab-deadlock/vault_alpha
+/home/phanha/os-lab-deadlock/vault_alpha/README.txt
+/home/phanha/os-lab-deadlock/vault_alpha/vault.lock
+/home/phanha/os-lab-deadlock/vault_beta
+/home/phanha/os-lab-deadlock/vault_beta/README.txt
+/home/phanha/os-lab-deadlock/vault_beta/vault.lock

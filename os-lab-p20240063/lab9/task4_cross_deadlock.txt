@@ -1,0 +1,18 @@
+=== public DR permissions ===
+drwxr-x--x 19 phanha phanha 4096 Jun 22 18:02 /home/phanha
+drwxr-xr-x  6 phanha phanha 4096 Jun 22 23:16 /home/phanha/os-lab-deadlock
+drwxr-xr-x  2 phanha phanha 4096 Jun 11 09:45 /home/phanha/os-lab-deadlock/public_dr_alpha
+drwxr-xr-x  2 phanha phanha 4096 Jun 22 23:16 /home/phanha/os-lab-deadlock/public_dr_beta
+/home/phanha/os-lab-deadlock/public_dr_alpha:
+total 0
+-rw-r--rw- 1 phanha phanha 0 Jun 22 23:19 vault.lock
+
+/home/phanha/os-lab-deadlock/public_dr_beta:
+total 0
+-rw-r--rw- 1 phanha phanha 0 Jun 22 23:19 vault.lock
+=== running cross sync processes ===
+phanha       948  0.0  0.0   4752  3328 pts/0    S    23:19   0:00 /bin/bash /home/phanha/bin/cross_sync_alpha
+phanha       954  0.0  0.0   4752  3328 pts/0    S    23:19   0:00 /bin/bash /home/phanha/bin/cross_sync_beta
+=== partner role ===
+Partner username: se-chheng-sokuntheary (simulated locally)
+My role: Player A (cross_sync_alpha)
