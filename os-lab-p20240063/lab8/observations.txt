@@ -1,0 +1,14 @@
+Run 1 final inventory: -2
+Run 2 final inventory: -2
+Run 3 final inventory: 94
+Run 4 final inventory: -2
+Run 5 final inventory: -2
+
+Explanation:
+The results are inconsistent because of a TOC-TOU (Time-of-Check to Time-of-Use)
+vulnerability. Multiple bot processes read the inventory value at nearly the same time
+before any of them writes back the updated value. This means several processes see the
+same inventory count, all approve their purchases simultaneously, and all subtract from
+the same original value — causing the inventory to go negative or leave unexpected
+remainders. The final result depends entirely on how the OS scheduler interleaves the
+processes, which is why each run produces a different value.

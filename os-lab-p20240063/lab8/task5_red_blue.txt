@@ -1,0 +1,21 @@
+=== public api permissions ===
+drwxr-x--x 16 phanha phanha 4096 Jun 22 10:47 /home/phanha
+drwxr-xr-x  2 phanha phanha 4096 Jun 22 11:02 /home/phanha/public_api
+total 12
+-rwxr-xr-x 1 phanha phanha 1028 Jun 22 10:51 buy_widget
+-rw-r--rw- 1 phanha phanha    0 Jun 22 11:02 inventory.lock
+-rw-r--rw- 1 phanha phanha    2 Jun 22 11:02 inventory.txt
+-rw-r--r-- 1 phanha phanha 2891 Jun 22 11:02 sales.log
+=== inventory ===
+0
+=== red team sales evidence ===
+[p20240063] [SUCCESS] RedTeam_phanha_7 bought 2 widgets.
+[p20240063] [SUCCESS] RedTeam_phanha_17 bought 2 widgets.
+[p20240063] [SUCCESS] RedTeam_phanha_12 bought 2 widgets.
+[p20240063] [SUCCESS] RedTeam_phanha_20 bought 2 widgets.
+[p20240063] [SUCCESS] RedTeam_phanha_8 bought 2 widgets.
+[p20240063] [SUCCESS] RedTeam_phanha_30 bought 2 widgets.
+[p20240063] [SUCCESS] RedTeam_phanha_38 bought 2 widgets.
+[p20240063] [SUCCESS] RedTeam_phanha_41 bought 2 widgets.
+[p20240063] [SUCCESS] RedTeam_phanha_40 bought 2 widgets.
+[p20240063] [SUCCESS] RedTeam_phanha_46 bought 2 widgets.

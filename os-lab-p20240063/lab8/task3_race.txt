@@ -1,0 +1,15 @@
+----- RUN 1 -----
+Final inventory: -2
+sales.log line count: 15
+----- RUN 2 -----
+Final inventory: -2
+sales.log line count: 8
+----- RUN 3 -----
+Final inventory: 94
+sales.log line count: 39
+----- RUN 4 -----
+Final inventory: -2
+sales.log line count: 41
+----- RUN 5 -----
+Final inventory: -2
+sales.log line count: 31
