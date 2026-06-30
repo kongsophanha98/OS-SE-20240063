@@ -1,0 +1,25 @@
+=== Collector Report ===
+Generated: Tue Jun 30 01:54:23 PM +07 2026
+
+--- Scanning directory: data1 ---
+[OK] data1/notes.txt - readable, contents:
+Sales notes for Q1
+
+[SKIP] data1/report.txt - does not exist
+[SKIP] data1/secret.txt - exists but not readable
+[SKIP] data1/missing.txt - does not exist
+
+--- Scanning directory: data2 ---
+[SKIP] data2/notes.txt - does not exist
+[OK] data2/report.txt - readable, contents:
+Status report from data2
+
+[SKIP] data2/secret.txt - does not exist
+[SKIP] data2/missing.txt - does not exist
+
+--- Scanning directory: data3 ---
+[SKIP] data3/notes.txt - does not exist
+[SKIP] data3/report.txt - does not exist
+[SKIP] data3/secret.txt - does not exist
+[SKIP] data3/missing.txt - does not exist
+

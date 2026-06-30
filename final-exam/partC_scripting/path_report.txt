@@ -1,0 +1,6 @@
+=== PATH Report ===
+PATH:
+/home/se-kong-sophanha/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+Resolved location of greeter:
+/home/se-kong-sophanha/bin/greeter

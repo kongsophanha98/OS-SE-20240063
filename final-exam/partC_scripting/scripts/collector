@@ -1,0 +1,37 @@
+#!/bin/bash
+# collector - safely scan directories and consolidate readable files
+# Part C2
+
+dirs=("data1" "data2" "data3")
+candidates=("notes.txt" "report.txt" "secret.txt" "missing.txt")
+
+report_file="collector_report.txt"
+> "$report_file"
+
+echo "=== Collector Report ===" >> "$report_file"
+echo "Generated: $(date)" >> "$report_file"
+echo "" >> "$report_file"
+
+for dir in "${dirs[@]}"; do
+    echo "--- Scanning directory: $dir ---" >> "$report_file"
+    for file in "${candidates[@]}"; do
+        path="$dir/$file"
+
+        if [ ! -e "$path" ]; then
+            echo "[SKIP] $path - does not exist" >> "$report_file"
+            continue
+        fi
+
+        if [ ! -r "$path" ]; then
+            echo "[SKIP] $path - exists but not readable" >> "$report_file"
+            continue
+        fi
+
+        echo "[OK] $path - readable, contents:" >> "$report_file"
+        cat "$path" >> "$report_file"
+        echo "" >> "$report_file"
+    done
+    echo "" >> "$report_file"
+done
+
+echo "Collector finished. Report written to $report_file"

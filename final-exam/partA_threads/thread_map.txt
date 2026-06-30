@@ -1,0 +1,8 @@
+Evidence: same PID, distinct LWP per thread (1:1 user-to-kernel thread mapping)
+
+se-kong+ 1463074 1451698 1463074  0    5 13:33 pts/30   00:00:00 ./thread_demo
+se-kong+ 1463074 1451698 1463077  0    5 13:33 pts/30   00:00:00 ./thread_demo
+se-kong+ 1463074 1451698 1463078  0    5 13:33 pts/30   00:00:00 ./thread_demo
+se-kong+ 1463074 1451698 1463079  0    5 13:33 pts/30   00:00:00 ./thread_demo
+se-kong+ 1463074 1451698 1463080  0    5 13:33 pts/30   00:00:00 ./thread_demo
+se-kong+ 1463076 1451698 1463076  0    1 13:33 pts/30   00:00:00 grep --color=auto thread_demo

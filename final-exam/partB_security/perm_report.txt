@@ -1,0 +1,25 @@
+=== Permission Story ===
+
+--- private_file.txt (owner rw only, octal 600) ---
+-rw------- 1 se-kong-sophanha se-kong-sophanha 21 Jun 30 13:38 private_file.txt
+
+  File: private_file.txt
+  Size: 21        	Blocks: 8          IO Block: 4096   regular file
+Device: 252,0	Inode: 47348852    Links: 1
+Access: (0600/-rw-------)  Uid: ( 1129/se-kong-sophanha)   Gid: ( 1131/se-kong-sophanha)
+Access: 2026-06-30 13:38:39.666725634 +0700
+Modify: 2026-06-30 13:38:39.666725634 +0700
+Change: 2026-06-30 13:38:45.527678027 +0700
+ Birth: 2026-06-30 13:38:39.666725634 +0700
+
+--- shared_dir (traversable, not listable, octal 711) ---
+drwx--x--x 2 se-kong-sophanha se-kong-sophanha 4096 Jun 30 13:38 shared_dir
+
+  File: shared_dir
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 252,0	Inode: 47348851    Links: 2
+Access: (0711/drwx--x--x)  Uid: ( 1129/se-kong-sophanha)   Gid: ( 1131/se-kong-sophanha)
+Access: 2026-06-30 13:38:44.104689584 +0700
+Modify: 2026-06-30 13:38:39.664725650 +0700
+Change: 2026-06-30 13:39:02.096543533 +0700
+ Birth: 2026-06-30 13:38:39.664725650 +0700
