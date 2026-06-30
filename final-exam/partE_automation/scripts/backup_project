@@ -1,0 +1,40 @@
+#!/bin/bash
+# backup_project - timestamped, compressed backup with retention
+# Part E1
+#
+# Usage: backup_project
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PARENT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
+PROJECT_DIR="$PARENT_DIR/sample_project"
+BACKUP_DIR="$PARENT_DIR/backups"
+RETAIN_N=2
+
+mkdir -p "$BACKUP_DIR"
+
+if [ ! -d "$PROJECT_DIR" ]; then
+    echo "Error: sample project not found at $PROJECT_DIR" >&2
+    exit 1
+fi
+
+timestamp=$(date '+%Y%m%d-%H%M%S')
+archive_name="sample_project-$timestamp.tar.gz"
+
+tar -czf "$BACKUP_DIR/$archive_name" -C "$PARENT_DIR" "sample_project"
+
+echo "$(date '+%Y-%m-%d %H:%M:%S') | Created backup: $archive_name" >> "$BACKUP_DIR/backup.log"
+
+cd "$BACKUP_DIR" || exit 1
+archive_count=$(ls -1 sample_project-*.tar.gz 2>/dev/null | wc -l)
+
+if [ "$archive_count" -gt "$RETAIN_N" ]; then
+    to_delete=$(ls -1t sample_project-*.tar.gz | tail -n +"$((RETAIN_N + 1))")
+    for old in $to_delete; do
+        rm -f "$old"
+        echo "$(date '+%Y-%m-%d %H:%M:%S') | Pruned old backup: $old" >> "$BACKUP_DIR/backup.log"
+    done
+fi
+
+echo "Backup complete: $archive_name"
+echo "Archives now in $BACKUP_DIR:"
+ls -1t "$BACKUP_DIR"/sample_project-*.tar.gz

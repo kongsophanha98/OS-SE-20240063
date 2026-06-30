@@ -8,58 +8,63 @@
 ---
 
 ## Curveball A — extra worker(s) that start after the others join
-
-- **Issued value:** `<N>` extra worker(s)
-- **Announced instruction:** <paste exactly what was announced>
-- **Live value(s) I acted on:** base PID = `<...>`; new LWP id(s) that appeared = `<...>`
+- **Issued value:** `1` extra worker(s)
+- **Announced instruction:** Edit `thread_demo.c` to spawn this many extra workers
+  that start only after the originals have joined; show the new LWP(s) appear in
+  the mapping then disappear.
+- **Live value(s) I acted on:** base PID = `1598436`; new LWP id that appeared =
+  `1598668`
 - **Commands:**
-
 ```bash
-# edit thread_demo.c to spawn N extra workers only AFTER the originals join
-# recompile, run, and capture the mapping showing the new LWP(s) appear then vanish
-<your commands>
+nano thread_demo.c   # added extra-worker block after the join loop, before return 0
+gcc -pthread thread_demo.c -o thread_demo
+./thread_demo & echo "PID: $!"
+sleep 9
+ps -eLf | grep thread_demo
+sleep 9
+ps -eLf | grep thread_demo
 ```
-
 - **Screenshot:**
-
 ![A live — new LWP appears then is gone](partA_threads/images/live_a.png)
 
----
-
 ## Curveball D — per-buyer purchase cap
-
-- **Issued value:** cap = `<N>`
-- **Announced instruction:** <paste>
-- **Live value(s) I acted on:** stock before = `<...>`; order(s) rejected for exceeding
-  the cap = `<...>`; final stock = `<...>`
+- **Issued value:** cap = `7`
+- **Announced instruction:** Add a per-buyer purchase cap to your purchase script
+  (`buy_widget`) — reject any single order above it; re-run `swarm` and show the
+  locked result respects the cap and stays consistent.
+- **Live value(s) I acted on:** stock before = `200`; order rejected for exceeding
+  the cap = Bob's order of `8` (cap is `7`); final stock after swarm re-runs = `150`
+  (consistent across all 3 runs)
 - **Commands:**
-
 ```bash
-# add a per-buyer cap to buy_<product>: reject any single order above <N>
-# reset stock, re-run swarm, show it stays consistent AND respects the cap
-<your commands>
+nano buy_widget   # added PURCHASE_CAP=7 check after quantity validation
+echo 200 > stock.txt
+./buy_widget Alice 5
+./buy_widget Bob 8
+cat stock.txt
+for run in 1 2 3; do
+    echo 200 > stock.txt
+    ./swarm
+done
 ```
-
 - **Screenshot:**
-
 ![D live — locked result respects the cap](partD_secure/images/live_d.png)
 
----
-
 ## Curveball E — idempotent timed_job
-
-- **Issued value:** token = `<TOKEN>`
-- **Announced instruction:** <paste>
-- **Live value(s) I acted on:** today's marker line = `<...>`; 1st trigger = ran,
-  2nd trigger = skipped
+- **Issued value:** token = `SEALTAG`
+- **Announced instruction:** Make `timed_job` idempotent using this marker token —
+  it must refuse to run if the token for today is already in its log; trigger it
+  twice and prove the 2nd was skipped.
+- **Live value(s) I acted on:** today's marker line = `SEALTAG-2026-06-30`; 1st
+  trigger = fired (PID 1621384), 2nd trigger = skipped (PID 1621387)
 - **Commands:**
-
 ```bash
-# add a guard to timed_job: refuse to run if today's <TOKEN> entry is already in the log
-# trigger it twice and show the 2nd run was skipped
-<your commands>
+nano timed_job   # added TOKEN="SEALTAG", marker check via grep before firing
+chmod +x timed_job
+rm -f ../logs/test_idempotent.log
+./timed_job ../logs/test_idempotent.log
+./timed_job ../logs/test_idempotent.log
+cat ../logs/test_idempotent.log
 ```
-
 - **Screenshot:**
-
 ![E live — 2nd run skipped](partE_automation/images/live_e.png)

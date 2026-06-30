@@ -1,0 +1,21 @@
+#!/bin/bash
+# swarm - concurrency driver: launches concurrent buy_widget purchases
+# Part D2
+#
+# Usage: swarm
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BUY_WIDGET="$SCRIPT_DIR/buy_widget"
+
+NUM_BUYERS=50
+
+echo "Launching $NUM_BUYERS concurrent buyers..."
+
+for i in $(seq 1 "$NUM_BUYERS"); do
+    "$BUY_WIDGET" "buyer$i" 1 >/dev/null 2>&1 &
+done
+
+wait
+
+echo "All $NUM_BUYERS purchases attempted."
+echo "Final stock: $(cat "$SCRIPT_DIR/stock.txt")"

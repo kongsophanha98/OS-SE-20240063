@@ -1,0 +1,23 @@
+#!/bin/bash
+# timed_job - appends a timestamped, identifiable line to a given output file
+# Part E2 + Curveball E (idempotent via SEALTAG token)
+#
+# Usage: timed_job <output_file>
+
+output_file="$1"
+TOKEN="SEALTAG"
+today="$(date '+%Y-%m-%d')"
+marker="${TOKEN}-${today}"
+
+if [ -z "$output_file" ]; then
+    echo "Usage: timed_job <output_file>" >&2
+    exit 1
+fi
+
+# --- LIVE CURVEBALL E: idempotency guard ---
+if [ -f "$output_file" ] && grep -q "$marker" "$output_file"; then
+    echo "[timed_job] SKIPPED at $(date '+%Y-%m-%d %H:%M:%S') - marker $marker already present today (PID=$$)" >> "$output_file"
+    exit 0
+fi
+
+echo "[timed_job] fired at $(date '+%Y-%m-%d %H:%M:%S') (PID=$$, student_id=p20240063) marker=$marker" >> "$output_file"

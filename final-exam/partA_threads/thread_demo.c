@@ -45,5 +45,29 @@ int main(void) {
     }
 
     printf("=== Summary: all %d threads joined, total = %ld ===\n", NUM_THREADS, sum);
+
+    /* --- LIVE CURVEBALL A: spawn 1 extra worker(s) AFTER originals joined --- */
+    #define EXTRA_WORKERS 1
+    pthread_t extra_threads[EXTRA_WORKERS];
+
+    printf("\n[CURVEBALL] Spawning %d extra worker(s) AFTER originals joined...\n", EXTRA_WORKERS);
+    printf("[CURVEBALL] Run this in another terminal NOW to capture the new LWP:\n");
+    printf("[CURVEBALL]   ps -eLf | grep thread_demo\n\n");
+
+    for (long i = 0; i < EXTRA_WORKERS; i++) {
+        long id = NUM_THREADS + i;
+        pthread_create(&extra_threads[i], NULL, worker, (void *)id);
+    }
+
+    for (int i = 0; i < EXTRA_WORKERS; i++) {
+        void *ret;
+        pthread_join(extra_threads[i], &ret);
+        long *res = (long *)ret;
+        printf("Main: joined EXTRA thread, got result = %ld\n", *res);
+        free(res);
+    }
+
+    printf("[CURVEBALL] Extra worker(s) joined and exited; their LWP(s) no longer exist.\n");
+
     return 0;
 }

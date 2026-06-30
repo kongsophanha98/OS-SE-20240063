@@ -1,0 +1,59 @@
+#!/bin/bash
+# buy_widget - purchase engine for TechCorp Widget launch
+# Part D1 + D3 (flock-protected)
+#
+# Usage: buy_widget <buyer_name> <quantity>
+
+STUDENT_ID="p20240063"
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+STOCK_FILE="$SCRIPT_DIR/stock.txt"
+SALES_LOG="$SCRIPT_DIR/sales.log"
+LOCK_FILE="$SCRIPT_DIR/stock.lock"
+
+buyer="$1"
+quantity="$2"
+
+if [ -z "$buyer" ] || [ -z "$quantity" ]; then
+    echo "Usage: buy_widget <buyer_name> <quantity>" >&2
+    exit 1
+fi
+
+if ! [[ "$quantity" =~ ^[0-9]+$ ]] || [ "$quantity" -le 0 ]; then
+    echo "Error: quantity must be a positive integer." >&2
+    exit 1
+fi
+
+# --- LIVE CURVEBALL D: per-buyer purchase cap ---
+PURCHASE_CAP=7
+if [ "$quantity" -gt "$PURCHASE_CAP" ]; then
+    echo "Purchase REJECTED for $buyer: requested $quantity exceeds per-buyer cap of $PURCHASE_CAP." >&2
+    exit 1
+fi
+
+if [ ! -f "$STOCK_FILE" ]; then
+    echo "Error: stock file not found at $STOCK_FILE" >&2
+    exit 1
+fi
+
+(
+    flock -x 200
+
+    current_stock=$(cat "$STOCK_FILE")
+
+    if [ "$quantity" -gt "$current_stock" ]; then
+        echo "Purchase REJECTED for $buyer: requested $quantity, only $current_stock left." >&2
+        exit 1
+    fi
+
+    new_stock=$(( current_stock - quantity ))
+
+    sleep 0.01
+
+    echo "$new_stock" > "$STOCK_FILE"
+
+    echo "$(date '+%Y-%m-%d %H:%M:%S') | buyer=$buyer qty=$quantity new_stock=$new_stock student_id=$STUDENT_ID" >> "$SALES_LOG"
+
+    echo "Purchase OK: $buyer bought $quantity widget(s). Stock now $new_stock."
+
+) 200>"$LOCK_FILE"

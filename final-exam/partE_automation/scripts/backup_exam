@@ -1,0 +1,26 @@
+#!/bin/bash
+# backup_exam - tar+compress the whole final-exam folder to a timestamped
+# archive OUTSIDE the repo, so the backup never tars itself.
+# Part E3
+#
+# Usage: backup_exam
+
+FINAL_EXAM_DIR="$HOME/OS-SE-20240063/final-exam"
+BACKUP_DEST="$HOME/exam-backups"
+
+mkdir -p "$BACKUP_DEST"
+
+timestamp=$(date '+%Y%m%d-%H%M%S')
+archive_name="final-exam-$timestamp.tar.gz"
+
+if [ ! -d "$FINAL_EXAM_DIR" ]; then
+    echo "Error: final-exam dir not found at $FINAL_EXAM_DIR" >&2
+    exit 1
+fi
+
+tar -czf "$BACKUP_DEST/$archive_name" -C "$(dirname "$FINAL_EXAM_DIR")" "$(basename "$FINAL_EXAM_DIR")"
+
+echo "$(date '+%Y-%m-%d %H:%M:%S') | Backed up final-exam to $archive_name" >> "$BACKUP_DEST/backup_exam.log"
+
+echo "Backup complete: $BACKUP_DEST/$archive_name"
+

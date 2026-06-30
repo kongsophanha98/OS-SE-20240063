@@ -1,0 +1,21 @@
+=== D2: Unpatched swarm runs (expected correct final stock = 150) ===
+--- Run 1 ---
+Launching 50 concurrent buyers...
+All 50 purchases attempted.
+Final stock: -1
+
+--- Run 2 ---
+Launching 50 concurrent buyers...
+All 50 purchases attempted.
+Final stock: 198
+
+--- Run 3 ---
+Launching 50 concurrent buyers...
+All 50 purchases attempted.
+Final stock: 196
+
+--- Run 4 ---
+Launching 50 concurrent buyers...
+All 50 purchases attempted.
+Final stock: 196
+
